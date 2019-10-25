@@ -2,5 +2,7 @@
 Filename: script5.txt
 Running Test: ClassD
 Recursive: true
-hello
+======================================================
+Name: ClassD
+Super Class: Object
 ======================================================

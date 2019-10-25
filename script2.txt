@@ -2,5 +2,7 @@
 Filename: script2.txt
 Running Test: ClassA
 Recursive: true
-hello
+======================================================
+Name: ClassA
+Super Class: Object
 ======================================================

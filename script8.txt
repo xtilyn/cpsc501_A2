@@ -2,5 +2,7 @@
 Filename: script8.txt
 Running Test: Test String
 Recursive: true
-hello
+======================================================
+Name: String
+Super Class: Object
 ======================================================

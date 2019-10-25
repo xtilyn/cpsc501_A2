@@ -2,5 +2,25 @@
 Filename: script3.txt
 Running Test: ClassB
 Recursive: true
-hello
+======================================================
+Name: ClassB
+Super Class: ClassC
+------------------------------------------------------
+	Name: ClassC
+	Super Class: ClassD
+	Constructor name: ClassC
+	  Parameter types: none
+	  Modifiers: PUBLIC
+	Constructor name: ClassC
+	  Parameter types: int, int, 
+	  Modifiers: PUBLIC
+------------------------------------------------------
+		Name: ClassD
+		Super Class: Object
+		Constructor name: ClassD
+		  Parameter types: none
+		  Modifiers: PUBLIC
+		Constructor name: ClassD
+		  Parameter types: int, 
+		  Modifiers: PUBLIC
 ======================================================
