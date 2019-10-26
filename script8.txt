@@ -3,6 +3,515 @@ Filename: script8.txt
 Running Test: Test String
 Recursive: true
 ======================================================
-Name: String
-Super Class: Object
+• Class Name: String
+• Super Class: Object
+• Interfaces: Serializable, Comparable, CharSequence
+------------------------------------------------------
+	• Interface Name: Serializable
+	• Super Class: none
+------------------------------------------------------
+		• Interface Name: Comparable
+		• Super Class: none
+		• Method name: compareTo
+		  Exceptions thrown: none
+		  Parameter types: Object
+		  Return type: int
+		  Modifiers: null
+------------------------------------------------------
+			• Interface Name: CharSequence
+			• Super Class: none
+			• Method name: toString
+			  Exceptions thrown: none
+			  Parameter types: none
+			  Return type: String
+			  Modifiers: null
+			• Method name: charAt
+			  Exceptions thrown: none
+			  Parameter types: int
+			  Return type: char
+			  Modifiers: null
+			• Method name: length
+			  Exceptions thrown: none
+			  Parameter types: none
+			  Return type: int
+			  Modifiers: null
+			• Method name: subSequence
+			  Exceptions thrown: none
+			  Parameter types: int, int
+			  Return type: CharSequence
+			  Modifiers: null
+			• Method name: chars
+			  Exceptions thrown: none
+			  Parameter types: none
+			  Return type: IntStream
+			  Modifiers: PUBLIC
+			• Method name: codePoints
+			  Exceptions thrown: none
+			  Parameter types: none
+			  Return type: IntStream
+			  Modifiers: PUBLIC
+			• Method name: lambda$chars$0
+			  Exceptions thrown: none
+			  Parameter types: none
+			  Return type: OfInt
+			  Modifiers: null
+			• Method name: lambda$codePoints$1
+			  Exceptions thrown: none
+			  Parameter types: none
+			  Return type: OfInt
+			  Modifiers: null
+------------------------------------------------------
+• Constructor name: java.lang.String
+  Parameter types: byte[], int, int
+  Modifiers: PUBLIC
+• Constructor name: java.lang.String
+  Parameter types: byte[], Charset
+  Modifiers: PUBLIC
+• Constructor name: java.lang.String
+  Parameter types: byte[], String
+  Modifiers: PUBLIC
+• Constructor name: java.lang.String
+  Parameter types: byte[], int, int, Charset
+  Modifiers: PUBLIC
+• Constructor name: java.lang.String
+  Parameter types: byte[], int, int, String
+  Modifiers: PUBLIC
+• Constructor name: java.lang.String
+  Parameter types: char[], boolean
+  Modifiers: null
+• Constructor name: java.lang.String
+  Parameter types: StringBuilder
+  Modifiers: PUBLIC
+• Constructor name: java.lang.String
+  Parameter types: StringBuffer
+  Modifiers: PUBLIC
+• Constructor name: java.lang.String
+  Parameter types: byte[]
+  Modifiers: PUBLIC
+• Constructor name: java.lang.String
+  Parameter types: int[], int, int
+  Modifiers: PUBLIC
+• Constructor name: java.lang.String
+  Parameter types: none
+  Modifiers: PUBLIC
+• Constructor name: java.lang.String
+  Parameter types: char[]
+  Modifiers: PUBLIC
+• Constructor name: java.lang.String
+  Parameter types: String
+  Modifiers: PUBLIC
+• Constructor name: java.lang.String
+  Parameter types: char[], int, int
+  Modifiers: PUBLIC
+• Constructor name: java.lang.String
+  Parameter types: byte[], int
+  Modifiers: PUBLIC
+• Constructor name: java.lang.String
+  Parameter types: byte[], int, int, int
+  Modifiers: PUBLIC
+• Method name: equals
+  Exceptions thrown: none
+  Parameter types: Object
+  Return type: boolean
+  Modifiers: PUBLIC
+• Method name: toString
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: String
+  Modifiers: PUBLIC
+• Method name: hashCode
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: compareTo
+  Exceptions thrown: none
+  Parameter types: String
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: compareTo
+  Exceptions thrown: none
+  Parameter types: Object
+  Return type: int
+  Modifiers: null
+• Method name: indexOf
+  Exceptions thrown: none
+  Parameter types: String, int
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: indexOf
+  Exceptions thrown: none
+  Parameter types: String
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: indexOf
+  Exceptions thrown: none
+  Parameter types: int, int
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: indexOf
+  Exceptions thrown: none
+  Parameter types: int
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: indexOf
+  Exceptions thrown: none
+  Parameter types: char[], int, int, char[], int, int, int
+  Return type: int
+  Modifiers: STATIC
+• Method name: indexOf
+  Exceptions thrown: none
+  Parameter types: char[], int, int, String, int
+  Return type: int
+  Modifiers: STATIC
+• Method name: valueOf
+  Exceptions thrown: none
+  Parameter types: int
+  Return type: String
+  Modifiers: null
+• Method name: valueOf
+  Exceptions thrown: none
+  Parameter types: long
+  Return type: String
+  Modifiers: null
+• Method name: valueOf
+  Exceptions thrown: none
+  Parameter types: float
+  Return type: String
+  Modifiers: null
+• Method name: valueOf
+  Exceptions thrown: none
+  Parameter types: boolean
+  Return type: String
+  Modifiers: null
+• Method name: valueOf
+  Exceptions thrown: none
+  Parameter types: char[]
+  Return type: String
+  Modifiers: null
+• Method name: valueOf
+  Exceptions thrown: none
+  Parameter types: char[], int, int
+  Return type: String
+  Modifiers: null
+• Method name: valueOf
+  Exceptions thrown: none
+  Parameter types: Object
+  Return type: String
+  Modifiers: null
+• Method name: valueOf
+  Exceptions thrown: none
+  Parameter types: char
+  Return type: String
+  Modifiers: null
+• Method name: valueOf
+  Exceptions thrown: none
+  Parameter types: double
+  Return type: String
+  Modifiers: null
+• Method name: charAt
+  Exceptions thrown: none
+  Parameter types: int
+  Return type: char
+  Modifiers: PUBLIC
+• Method name: checkBounds
+  Exceptions thrown: none
+  Parameter types: byte[], int, int
+  Return type: void
+  Modifiers: null
+• Method name: codePointAt
+  Exceptions thrown: none
+  Parameter types: int
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: codePointBefore
+  Exceptions thrown: none
+  Parameter types: int
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: codePointCount
+  Exceptions thrown: none
+  Parameter types: int, int
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: compareToIgnoreCase
+  Exceptions thrown: none
+  Parameter types: String
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: concat
+  Exceptions thrown: none
+  Parameter types: String
+  Return type: String
+  Modifiers: PUBLIC
+• Method name: contains
+  Exceptions thrown: none
+  Parameter types: CharSequence
+  Return type: boolean
+  Modifiers: PUBLIC
+• Method name: contentEquals
+  Exceptions thrown: none
+  Parameter types: CharSequence
+  Return type: boolean
+  Modifiers: PUBLIC
+• Method name: contentEquals
+  Exceptions thrown: none
+  Parameter types: StringBuffer
+  Return type: boolean
+  Modifiers: PUBLIC
+• Method name: copyValueOf
+  Exceptions thrown: none
+  Parameter types: char[]
+  Return type: String
+  Modifiers: null
+• Method name: copyValueOf
+  Exceptions thrown: none
+  Parameter types: char[], int, int
+  Return type: String
+  Modifiers: null
+• Method name: endsWith
+  Exceptions thrown: none
+  Parameter types: String
+  Return type: boolean
+  Modifiers: PUBLIC
+• Method name: equalsIgnoreCase
+  Exceptions thrown: none
+  Parameter types: String
+  Return type: boolean
+  Modifiers: PUBLIC
+• Method name: format
+  Exceptions thrown: none
+  Parameter types: Locale, String, Object[]
+  Return type: String
+  Modifiers: null
+• Method name: format
+  Exceptions thrown: none
+  Parameter types: String, Object[]
+  Return type: String
+  Modifiers: null
+• Method name: getBytes
+  Exceptions thrown: none
+  Parameter types: int, int, byte[], int
+  Return type: void
+  Modifiers: PUBLIC
+• Method name: getBytes
+  Exceptions thrown: none
+  Parameter types: Charset
+  Return type: byte[]
+  Modifiers: PUBLIC
+• Method name: getBytes
+  Exceptions thrown: UnsupportedEncodingException
+  Parameter types: String
+  Return type: byte[]
+  Modifiers: PUBLIC
+• Method name: getBytes
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: byte[]
+  Modifiers: PUBLIC
+• Method name: getChars
+  Exceptions thrown: none
+  Parameter types: int, int, char[], int
+  Return type: void
+  Modifiers: PUBLIC
+• Method name: getChars
+  Exceptions thrown: none
+  Parameter types: char[], int
+  Return type: void
+  Modifiers: null
+• Method name: indexOfSupplementary
+  Exceptions thrown: none
+  Parameter types: int, int
+  Return type: int
+  Modifiers: PRIVATE
+• Method name: intern
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: String
+  Modifiers: null
+• Method name: isEmpty
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: boolean
+  Modifiers: PUBLIC
+• Method name: join
+  Exceptions thrown: none
+  Parameter types: CharSequence, CharSequence[]
+  Return type: String
+  Modifiers: null
+• Method name: join
+  Exceptions thrown: none
+  Parameter types: CharSequence, Iterable
+  Return type: String
+  Modifiers: null
+• Method name: lastIndexOf
+  Exceptions thrown: none
+  Parameter types: int
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: lastIndexOf
+  Exceptions thrown: none
+  Parameter types: String
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: lastIndexOf
+  Exceptions thrown: none
+  Parameter types: char[], int, int, String, int
+  Return type: int
+  Modifiers: STATIC
+• Method name: lastIndexOf
+  Exceptions thrown: none
+  Parameter types: String, int
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: lastIndexOf
+  Exceptions thrown: none
+  Parameter types: int, int
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: lastIndexOf
+  Exceptions thrown: none
+  Parameter types: char[], int, int, char[], int, int, int
+  Return type: int
+  Modifiers: STATIC
+• Method name: lastIndexOfSupplementary
+  Exceptions thrown: none
+  Parameter types: int, int
+  Return type: int
+  Modifiers: PRIVATE
+• Method name: length
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: matches
+  Exceptions thrown: none
+  Parameter types: String
+  Return type: boolean
+  Modifiers: PUBLIC
+• Method name: nonSyncContentEquals
+  Exceptions thrown: none
+  Parameter types: AbstractStringBuilder
+  Return type: boolean
+  Modifiers: PRIVATE
+• Method name: offsetByCodePoints
+  Exceptions thrown: none
+  Parameter types: int, int
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: regionMatches
+  Exceptions thrown: none
+  Parameter types: int, String, int, int
+  Return type: boolean
+  Modifiers: PUBLIC
+• Method name: regionMatches
+  Exceptions thrown: none
+  Parameter types: boolean, int, String, int, int
+  Return type: boolean
+  Modifiers: PUBLIC
+• Method name: replace
+  Exceptions thrown: none
+  Parameter types: char, char
+  Return type: String
+  Modifiers: PUBLIC
+• Method name: replace
+  Exceptions thrown: none
+  Parameter types: CharSequence, CharSequence
+  Return type: String
+  Modifiers: PUBLIC
+• Method name: replaceAll
+  Exceptions thrown: none
+  Parameter types: String, String
+  Return type: String
+  Modifiers: PUBLIC
+• Method name: replaceFirst
+  Exceptions thrown: none
+  Parameter types: String, String
+  Return type: String
+  Modifiers: PUBLIC
+• Method name: split
+  Exceptions thrown: none
+  Parameter types: String
+  Return type: String[]
+  Modifiers: PUBLIC
+• Method name: split
+  Exceptions thrown: none
+  Parameter types: String, int
+  Return type: String[]
+  Modifiers: PUBLIC
+• Method name: startsWith
+  Exceptions thrown: none
+  Parameter types: String, int
+  Return type: boolean
+  Modifiers: PUBLIC
+• Method name: startsWith
+  Exceptions thrown: none
+  Parameter types: String
+  Return type: boolean
+  Modifiers: PUBLIC
+• Method name: subSequence
+  Exceptions thrown: none
+  Parameter types: int, int
+  Return type: CharSequence
+  Modifiers: PUBLIC
+• Method name: substring
+  Exceptions thrown: none
+  Parameter types: int
+  Return type: String
+  Modifiers: PUBLIC
+• Method name: substring
+  Exceptions thrown: none
+  Parameter types: int, int
+  Return type: String
+  Modifiers: PUBLIC
+• Method name: toCharArray
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: char[]
+  Modifiers: PUBLIC
+• Method name: toLowerCase
+  Exceptions thrown: none
+  Parameter types: Locale
+  Return type: String
+  Modifiers: PUBLIC
+• Method name: toLowerCase
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: String
+  Modifiers: PUBLIC
+• Method name: toUpperCase
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: String
+  Modifiers: PUBLIC
+• Method name: toUpperCase
+  Exceptions thrown: none
+  Parameter types: Locale
+  Return type: String
+  Modifiers: PUBLIC
+• Method name: trim
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: String
+  Modifiers: PUBLIC
+• Field name: value
+  Field type: char[]
+  Modifiers: null
+  Array values: T, e, s, t,  , S, t, r, i, n, g, 
+• Field name: hash
+  Field type: int
+  Modifiers: PRIVATE
+  Current value: 0
+• Field name: serialVersionUID
+  Field type: long
+  Modifiers: null
+  Current value: -6849794470754667710
+• Field name: serialPersistentFields
+  Field type: ObjectStreamField[]
+  Modifiers: null
+  Array values: 
+• Field name: CASE_INSENSITIVE_ORDER
+  Field type: Comparator
+  Modifiers: null
+  Current value: java.lang.String$CaseInsensitiveComparator@266474c2
 ======================================================

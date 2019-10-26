@@ -3,6 +3,39 @@ Filename: script5.txt
 Running Test: ClassD
 Recursive: true
 ======================================================
-Name: ClassD
-Super Class: Object
+• Class Name: ClassD
+• Super Class: Object
+• Interfaces: none
+• Constructor name: ClassD
+  Parameter types: none
+  Modifiers: PUBLIC
+• Constructor name: ClassD
+  Parameter types: int
+  Modifiers: PUBLIC
+• Method name: toString
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: String
+  Modifiers: PUBLIC
+• Method name: getVal3
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: int
+  Modifiers: PUBLIC
+• Field name: val
+  Field type: ClassA
+  Modifiers: PRIVATE
+  Current value: ClassA
+• Field name: val2
+  Field type: ClassA
+  Modifiers: null
+  Current value: null
+• Field name: val3
+  Field type: int
+  Modifiers: PRIVATE
+  Current value: 34
+• Field name: vallarray
+  Field type: ClassA[]
+  Modifiers: PRIVATE
+  Array values: null, null, null, null, null, null, null, null, null, null, 
 ======================================================

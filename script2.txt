@@ -3,6 +3,62 @@ Filename: script2.txt
 Running Test: ClassA
 Recursive: true
 ======================================================
-Name: ClassA
-Super Class: Object
+• Class Name: ClassA
+• Super Class: Object
+• Interfaces: Serializable, Runnable
+------------------------------------------------------
+	• Interface Name: Serializable
+	• Super Class: none
+------------------------------------------------------
+		• Interface Name: Runnable
+		• Super Class: none
+		• Method name: run
+		  Exceptions thrown: none
+		  Parameter types: none
+		  Return type: void
+		  Modifiers: null
+------------------------------------------------------
+• Constructor name: ClassA
+  Parameter types: none
+  Modifiers: PUBLIC
+• Constructor name: ClassA
+  Parameter types: int
+  Modifiers: PUBLIC
+• Method name: run
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: void
+  Modifiers: PUBLIC
+• Method name: toString
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: String
+  Modifiers: PUBLIC
+• Method name: setVal
+  Exceptions thrown: Exception
+  Parameter types: int
+  Return type: void
+  Modifiers: PUBLIC
+• Method name: getVal
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: int
+  Modifiers: PUBLIC
+• Method name: printSomething
+  Exceptions thrown: none
+  Parameter types: none
+  Return type: void
+  Modifiers: PRIVATE
+• Field name: val
+  Field type: int
+  Modifiers: PRIVATE
+  Current value: 12
+• Field name: val2
+  Field type: double
+  Modifiers: PRIVATE
+  Current value: 0.2
+• Field name: val3
+  Field type: boolean
+  Modifiers: PRIVATE
+  Current value: true
 ======================================================

@@ -1,6 +1,4 @@
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Modifier;
-import java.util.ArrayList;
+import java.lang.reflect.*;
 import java.util.HashMap;
 
 public class Inspector {
@@ -17,46 +15,119 @@ public class Inspector {
         if (modifiers == null) initModifiers();
 
         System.out.println("======================================================");
-        System.out.println("Name: " + c.getSimpleName());
-        ArrayList<String> superClasses = new ArrayList<>();
-        System.out.println("Super Class: " + c.getSuperclass().getSimpleName());
+        String identifierName = c.isInterface() ? "Interface " : "Class ";
+        System.out.println(getSpacing(numIndents, true) + "• " + identifierName + "Name: " + c.getSimpleName());
+        System.out.println("• Super Class: " + c.getSuperclass().getSimpleName());
 
         Class currClass = c.getSuperclass();
         while (currClass != null && !currClass.getSimpleName().equals("Object")) {
             numIndents++;
-            System.out.println("------------------------------------------------------");
-            System.out.println(getSpacing(numIndents, true) + "Name: " + currClass.getSimpleName());
-            System.out.println(getSpacing(numIndents, true) + "Super Class: " + currClass.getSuperclass().getSimpleName());
-            printConstructors(currClass, numIndents);
-            printMethods(currClass, numIndents);
-            printFields(currClass, numIndents, recursive);
+            printInfo(currClass, obj, recursive);
             currClass = currClass.getSuperclass();
         }
+
+        if (!c.getSuperclass().getSimpleName().equals("Object"))
+            System.out.println("------------------------------------------------------");
+
+        // print interfaces
+        Class[] interfaces = c.getInterfaces();
+        System.out.println("• Interfaces: " + formatArrWithSeparator(interfaces));
+
+        // recurse interfaces
+        if (interfaces.length > 0) {
+            int i = 0;
+            currClass = interfaces[i];
+            numIndents = 0;
+            while (true) {
+                numIndents++;
+                printInfo(currClass, obj, recursive);
+                currClass = currClass.getSuperclass();
+
+                if (currClass == null || currClass.getSimpleName().equals("Object")) {
+                    i++;
+                    if (i >= interfaces.length) break;
+                    else {
+                        currClass = interfaces[i];
+                    }
+                }
+            }
+            System.out.println("------------------------------------------------------");
+        }
+
+        printConstructors(c, 0);
+        printMethods(c, 0);
+        printFields(c, obj, 0, recursive);
     }
 
     private void printConstructors(Class c, int numIndents) {
-        Constructor[] constructors = c.getConstructors();
-        int n = constructors.length;
-        for (int i = 0; i < n; i++) {
-            Constructor cons = constructors[i];
+        Constructor[] constructors = c.getDeclaredConstructors();
+        for (Constructor cons : constructors) {
             System.out.print(getSpacing(numIndents, true));
-            System.out.println("Constructor name: " + cons.getName());
+            System.out.println("• Constructor name: " + cons.getName());
             System.out.print(getSpacing(numIndents, true));
-            System.out.println("  Parameter types: " + printArrWithSeparator(cons.getParameterTypes()));
+            System.out.println("  Parameter types: " + formatArrWithSeparator(cons.getParameterTypes()));
             System.out.print(getSpacing(numIndents, true));
             System.out.println("  Modifiers: " + modifiers.get(cons.getModifiers()));
         }
     }
 
     private void printMethods(Class c, int numIndents) {
-        // TODO
+        Method[] methods = c.getDeclaredMethods();
+        for (Method method : methods) {
+            System.out.print(getSpacing(numIndents, true));
+            System.out.println("• Method name: " + method.getName());
+            System.out.print(getSpacing(numIndents, true));
+            System.out.println("  Exceptions thrown: " + formatArrWithSeparator(method.getExceptionTypes()));
+            System.out.print(getSpacing(numIndents, true));
+            System.out.println("  Parameter types: " + formatArrWithSeparator(method.getParameterTypes()));
+            System.out.print(getSpacing(numIndents, true));
+            System.out.println("  Return type: " + method.getReturnType().getSimpleName());
+            System.out.print(getSpacing(numIndents, true));
+            System.out.println("  Modifiers: " + modifiers.get(method.getModifiers()));
+        }
     }
 
-    private void printFields(Class c, int numIndents, boolean recursive) {
-        // TODO
+    private void printFields(Class c, Object obj, int numIndents, boolean recursive) {
+        Field[] fields = c.getDeclaredFields();
+        for (Field field : fields) {
+            System.out.print(getSpacing(numIndents, true));
+            System.out.println("• Field name: " + field.getName());
+            System.out.print(getSpacing(numIndents, true));
+            System.out.println("  Field type: " + field.getType().getSimpleName());
+            System.out.print(getSpacing(numIndents, true));
+            System.out.println("  Modifiers: " + modifiers.get(field.getModifiers()));
+            field.setAccessible(true);
+            try {
+                System.out.print(getSpacing(numIndents, true));
+                if (field.getType().isArray()) {
+                    System.out.println("  Array values: " + getArrayValues(field.get(obj)));
+                } else {
+                    System.out.println("  Current value: " + field.get(obj));
+                }
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
-    private String getSpacing(int numIndents, boolean isTab) {
+    String getArrayValues(Object obj) {
+        StringBuilder builder = new StringBuilder();
+
+        int i = 0;
+        while (true) {
+            try {
+                builder.append(Array.get(obj, i));
+                builder.append(", ");
+            } catch (ArrayIndexOutOfBoundsException e) {
+                break;
+            }
+            i++;
+        }
+
+        return builder.toString();
+    }
+
+    String getSpacing(int numIndents, boolean isTab) {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < numIndents; i++) {
             if (isTab) builder.append("\t");
@@ -65,15 +136,26 @@ public class Inspector {
         return builder.toString();
     }
 
-    private String printArrWithSeparator(Class[] classes) {
+    String formatArrWithSeparator(Class[] classes) {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < classes.length; i++) {
             builder.append(classes[i].getSimpleName());
-            if (i < classes.length) builder.append(", ");
+            if (i != classes.length - 1) builder.append(", ");
         }
         String result = builder.toString();
         if (result.isEmpty()) return "none";
         else return result;
+    }
+
+    private void printInfo(Class currClass, Object obj, boolean recursive) {
+        System.out.println("------------------------------------------------------");
+        String identifierName = currClass.isInterface() ? "Interface " : "Class ";
+        System.out.println(getSpacing(numIndents, true) + "• " + identifierName + "Name: " + currClass.getSimpleName());
+        String superClassName = currClass.getSuperclass() == null ? "none" : currClass.getSuperclass().getSimpleName();
+        System.out.println(getSpacing(numIndents, true) + "• Super Class: " + superClassName);
+        printConstructors(currClass, numIndents);
+        printMethods(currClass, numIndents);
+        printFields(currClass, obj, numIndents, recursive);
     }
 
     private void initModifiers() {
